@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Whenever the Rough Checkbox is changed, the Total Value of the Gemstone is calculated.</description>
+        <field>rough</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Gemstone Value on Rough Change</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+	// These lines of code are for testing purposes.
+	// console.log("The type of value of newValue is " + typeof newValue + "!");
+	// console.log("The value of newValue is " + newValue + "!");
+
+	// Set the default value of the Rough Adjustment field
+	var theRough = 1;
+
+	// Set the value of the Rough Adjustment field accordingly
+	if(newValue === 'true') {
+		theRough = 0.25;
+	} else {
+		theRough = 1;
+	}
+
+	// Fetch the values of the Base Value and Size Multiplier fields.
+	var theBaseValue = g_form.getValue('base_value');
+	var theSizeMultiplier = g_form.getValue('size_multiplier');
+
+	// Convert the values of theBaseValue and theSizeMultiplier to numbers.
+	theBaseValue = Number(theBaseValue);
+	theSizeMultiplier = Number(theSizeMultiplier);
+
+	// If theSizeMultiplier isn't set yet, set the value for it to one.
+	if(theSizeMultiplier === 0) {
+		theSizeMultiplier = 1;
+	}
+
+	// Multiply the Base Value by the Size Multiplier and the Rough Adjuster
+	var theTotal = theBaseValue * theSizeMultiplier * theRough;
+
+	// Set the resulting value to the Total Value field.
+
+	g_form.setValue('total_value', theTotal);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-26 19:35:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>df2dff4997a13110be7fff96f053af9e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Gemstone Value on Rough Change</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
+        <sys_update_name>sys_script_client_df2dff4997a13110be7fff96f053af9e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-26 19:41:11</sys_updated_on>
+        <table>x_847214_treasure_gemstone</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

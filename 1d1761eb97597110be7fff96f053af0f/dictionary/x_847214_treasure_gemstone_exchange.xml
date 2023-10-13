@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="4b3aa1ef97597110be7fff96f053af5d" label="Gemstone Exchange" max_length="40" name="x_847214_treasure_gemstone_exchange" type="collection">
+        <element label="Base Value in Gold Pieces" mandatory="true" max_length="40" name="base_value_in_gold_pieces" type="integer"/>
+        <element display="true" label="Gemstone" mandatory="true" max_length="40" name="gemstone" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+    </element>
+</database>
