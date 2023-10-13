@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="de4f22ab979d7110be7fff96f053afc7" label="Gemstone Size Rates" max_length="40" name="x_847214_treasure_gemstone_size_rates" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element display="true" label="Size" max_length="40" name="size" type="string"/>
+        <element label="Size Description" max_length="40" name="size_description" type="string"/>
+        <element label="Value Multiplier" max_length="20" name="value_multiplier" type="decimal"/>
+    </element>
+</database>

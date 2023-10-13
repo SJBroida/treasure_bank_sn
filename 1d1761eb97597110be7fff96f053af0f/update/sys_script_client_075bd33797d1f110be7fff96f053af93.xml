@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Script that automatically populates the Base Value field when a Gemstone from the Type field is selected.</description>
+        <field>type</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Load Gem Base Value for Gem Type</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+// First make sure that the newValue is not the same as oldValue
+if(newValue != oldValue) {
+
+	// This line of code is for testing purposes.
+	// console.log("The 'Type' field has been changed!");
+
+	// fetch the base value in gold pieces from the type field
+	// use the call back function to access the reference data
+	g_form.getReference('type', getBaseValue);
+
+}
+
+// To ensure no problems with asynchronus running, work continues in the function
+function getBaseValue(theReference) {
+
+	// Fetch the value of the gold pieces from the reference object.
+	var theBaseValue = theReference.getValue('base_value_in_gold_pieces');
+
+	// This line of code is for testing purposes.
+	// console.log("The value of theBaseValue is " + theBaseValue + "!");
+
+	// Set the value in the base value field in the Gemstone form.
+	g_form.setValue('base_value', theBaseValue);
+
+}
+
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 19:11:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>075bd33797d1f110be7fff96f053af93</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>Load Gem Base Value for Gem Type</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
+        <sys_update_name>sys_script_client_075bd33797d1f110be7fff96f053af93</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 22:00:23</sys_updated_on>
+        <table>x_847214_treasure_gemstone</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
