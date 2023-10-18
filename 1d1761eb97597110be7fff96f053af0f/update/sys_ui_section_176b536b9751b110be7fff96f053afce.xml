@@ -4,55 +4,55 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-09-22 00:33:20</sys_created_on>
-            <sys_id>e4ab1beb9751b110be7fff96f053af39</sys_id>
+            <sys_created_on>2023-10-17 02:28:07</sys_created_on>
+            <sys_id>7da5a47b97fd3510be7fff96f053af6c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847214_treasure_gemstone" sys_domain="global" view="Default view">176b536b9751b110be7fff96f053afce</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-09-22 00:33:20</sys_updated_on>
+            <sys_updated_on>2023-10-17 02:28:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>type</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-17 02:28:07</sys_created_on>
+            <sys_id>fda5a47b97fd3510be7fff96f053af6c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_847214_treasure_gemstone" sys_domain="global" view="Default view">176b536b9751b110be7fff96f053afce</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-17 02:28:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>size</element>
-            <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-09-22 00:33:20</sys_created_on>
-            <sys_id>68ab1beb9751b110be7fff96f053af39</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_847214_treasure_gemstone" sys_domain="global" view="Default view">176b536b9751b110be7fff96f053afce</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-09-22 00:33:20</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>base_value</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-09-22 00:33:20</sys_created_on>
-            <sys_id>e8ab1beb9751b110be7fff96f053af39</sys_id>
+            <sys_created_on>2023-10-17 02:28:07</sys_created_on>
+            <sys_id>71a5a47b97fd3510be7fff96f053af6d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847214_treasure_gemstone" sys_domain="global" view="Default view">176b536b9751b110be7fff96f053afce</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-09-22 00:33:20</sys_updated_on>
+            <sys_updated_on>2023-10-17 02:28:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>adjustment_for_rough_gems</element>
+            <element>rough</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-09-22 00:33:20</sys_created_on>
-            <sys_id>6cab1beb9751b110be7fff96f053af39</sys_id>
+            <sys_created_on>2023-10-17 02:28:07</sys_created_on>
+            <sys_id>f1a5a47b97fd3510be7fff96f053af6d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847214_treasure_gemstone" sys_domain="global" view="Default view">176b536b9751b110be7fff96f053afce</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-09-22 00:33:20</sys_updated_on>
+            <sys_updated_on>2023-10-17 02:28:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,41 +60,41 @@
             <element>.split</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-09-22 00:33:20</sys_created_on>
-            <sys_id>ecab1beb9751b110be7fff96f053af39</sys_id>
+            <sys_created_on>2023-10-17 02:28:07</sys_created_on>
+            <sys_id>75a5a47b97fd3510be7fff96f053af6d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847214_treasure_gemstone" sys_domain="global" view="Default view">176b536b9751b110be7fff96f053afce</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-09-22 00:33:20</sys_updated_on>
+            <sys_updated_on>2023-10-17 02:28:07</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>type</element>
+            <element>owner</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-09-22 00:33:20</sys_created_on>
-            <sys_id>60ab1beb9751b110be7fff96f053af3a</sys_id>
+            <sys_created_on>2023-10-17 02:28:07</sys_created_on>
+            <sys_id>f5a5a47b97fd3510be7fff96f053af6d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847214_treasure_gemstone" sys_domain="global" view="Default view">176b536b9751b110be7fff96f053afce</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-09-22 00:33:20</sys_updated_on>
+            <sys_updated_on>2023-10-17 02:28:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>rough</element>
+            <element>base_value</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-09-22 00:33:20</sys_created_on>
-            <sys_id>e0ab1beb9751b110be7fff96f053af3a</sys_id>
+            <sys_created_on>2023-10-17 02:28:07</sys_created_on>
+            <sys_id>79a5a47b97fd3510be7fff96f053af6d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847214_treasure_gemstone" sys_domain="global" view="Default view">176b536b9751b110be7fff96f053afce</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-09-22 00:33:20</sys_updated_on>
+            <sys_updated_on>2023-10-17 02:28:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>size_multiplier</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-09-22 00:33:20</sys_created_on>
-            <sys_id>64ab1beb9751b110be7fff96f053af3a</sys_id>
+            <sys_created_on>2023-10-17 02:28:07</sys_created_on>
+            <sys_id>f9a5a47b97fd3510be7fff96f053af6d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847214_treasure_gemstone" sys_domain="global" view="Default view">176b536b9751b110be7fff96f053afce</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-09-22 00:33:20</sys_updated_on>
+            <sys_updated_on>2023-10-17 02:28:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>total_value</element>
             <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-09-22 00:33:20</sys_created_on>
-            <sys_id>e4ab1beb9751b110be7fff96f053af3a</sys_id>
+            <sys_created_on>2023-10-17 02:28:07</sys_created_on>
+            <sys_id>7da5a47b97fd3510be7fff96f053af6d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847214_treasure_gemstone" sys_domain="global" view="Default view">176b536b9751b110be7fff96f053afce</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-09-22 00:33:20</sys_updated_on>
+            <sys_updated_on>2023-10-17 02:28:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

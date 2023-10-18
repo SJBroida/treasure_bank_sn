@@ -2,12 +2,16 @@
     <element db_object_id="ae495b2b9751b110be7fff96f053afe6" label="Gemstone" max_length="40" name="x_847214_treasure_gemstone" type="collection">
         <element label="Base Value" max_length="40" name="base_value" read_only="true" type="integer"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Owner" max_length="32" name="owner" reference="x_847214_treasure_game_player" type="reference"/>
         <element label="Rough" max_length="40" name="rough" type="boolean"/>
         <element label="Size" mandatory="true" max_length="32" name="size" reference="x_847214_treasure_gemstone_size_rates" type="reference"/>
         <element label="Size Multiplier" max_length="20" name="size_multiplier" read_only="true" type="decimal"/>
         <element label="Total Value" max_length="20" name="total_value" read_only="true" type="decimal"/>
         <element label="Type" mandatory="true" max_length="40" name="type" reference="x_847214_treasure_gemstone_exchange" type="reference"/>
         <index name="index">
+            <element name="owner"/>
+        </index>
+        <index name="index2">
             <element name="size"/>
         </index>
     </element>

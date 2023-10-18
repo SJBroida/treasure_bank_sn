@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="69e0acf397fd3510be7fff96f053af44" label="Treasure Account" max_length="40" name="x_847214_treasure_treasure_account" type="collection">
+        <element label="Account Owner" max_length="32" name="account_owner" reference="x_847214_treasure_game_player" type="reference"/>
+        <element label="Gold Balance" max_length="20" name="gold_balance" type="decimal"/>
+        <index name="index">
+            <element name="account_owner"/>
+        </index>
+    </element>
+</database>

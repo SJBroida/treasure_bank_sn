@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>6e6b62a7979d7110be7fff96f053afae</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_847214_treasure_gemstone_exchange">
+    <x_847214_treasure_gemstone_exchange action="INSERT_OR_UPDATE">
+        <base_value_in_gold_pieces>100</base_value_in_gold_pieces>
+        <gemstone>Coral</gemstone>
+        <number>GEM0001023</number>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-21 21:02:52</sys_created_on>
+        <sys_id>6e6b62a7979d7110be7fff96f053afae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-21 21:02:52</sys_updated_on>
+    </x_847214_treasure_gemstone_exchange>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-13 21:40:49</sys_created_on>
+        <sys_id>4027cc7a97f53110be7fff96f053af95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Coral</sys_name>
+        <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
+        <sys_update_name>sys_metadata_link_4027cc7a97f53110be7fff96f053af95</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-13 21:40:49</sys_updated_on>
+        <tablename>x_847214_treasure_gemstone_exchange</tablename>
+    </sys_metadata_link>
+</record_update>

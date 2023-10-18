@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>f75aa267979d7110be7fff96f053af43</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_847214_treasure_gemstone_exchange">
+    <x_847214_treasure_gemstone_exchange action="INSERT_OR_UPDATE">
+        <base_value_in_gold_pieces>10</base_value_in_gold_pieces>
+        <gemstone>Blue Quartz</gemstone>
+        <number>GEM0001014</number>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-21 20:58:22</sys_created_on>
+        <sys_id>f75aa267979d7110be7fff96f053af43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-21 20:58:22</sys_updated_on>
+    </x_847214_treasure_gemstone_exchange>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-13 21:40:50</sys_created_on>
+        <sys_id>5c2700ba97f53110be7fff96f053af0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Blue Quartz</sys_name>
+        <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
+        <sys_update_name>sys_metadata_link_5c2700ba97f53110be7fff96f053af0e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-13 21:40:50</sys_updated_on>
+        <tablename>x_847214_treasure_gemstone_exchange</tablename>
+    </sys_metadata_link>
+</record_update>
