@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="06fe256297423110be7fff96f053af6c" label="Coin Exchange" max_length="40" name="x_847214_treasure_coin_exchange" type="collection">
+        <element label="Coin" max_length="40" name="coin" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Value in Copper" max_length="20" name="value_in_copper" type="decimal"/>
+        <element label="Value in Electrum" max_length="20" name="value_in_electrum" type="decimal"/>
+        <element label="Value in Gold" max_length="20" name="value_in_gold" type="decimal"/>
+        <element label="Value in Platinum" max_length="20" name="value_in_platinum" type="decimal"/>
+        <element label="Value in Silver" max_length="20" name="value_in_silver" type="decimal"/>
+    </element>
+</database>
