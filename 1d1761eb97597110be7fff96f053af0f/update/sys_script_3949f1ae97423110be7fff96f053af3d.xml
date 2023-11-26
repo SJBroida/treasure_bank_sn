@@ -81,7 +81,7 @@
 
 	// Add the Gold Coin value of all the coins together.
 	var theGoldTotal = theGoldCoins + silverInGold + copperInGold + electrumInGold + platinumInGold;
-	// gs.info("The value of theGold variable is " + theGoldTotal);
+	// gs.info("The value of theGoldTotal variable is " + theGoldTotal);
 	// Set the gold_balance to the total.
 	current.gold_balance = theGoldTotal;
 
@@ -92,7 +92,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3949f1ae97423110be7fff96f053af3d</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>Calculate Gold Balance</sys_name>
         <sys_overrides/>
         <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
@@ -100,7 +100,7 @@
         <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
         <sys_update_name>sys_script_3949f1ae97423110be7fff96f053af3d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-07 23:39:03</sys_updated_on>
+        <sys_updated_on>2023-11-07 23:51:04</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

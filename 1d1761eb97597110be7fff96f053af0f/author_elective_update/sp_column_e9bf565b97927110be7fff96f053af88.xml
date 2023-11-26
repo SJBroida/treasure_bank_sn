@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <semantic_tag/>
+        <size>12</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">edbf565b97927110be7fff96f053af85</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-09 18:35:51</sys_created_on>
+        <sys_id>e9bf565b97927110be7fff96f053af88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
+        <sys_update_name>sp_column_e9bf565b97927110be7fff96f053af88</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-09 18:35:51</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</application>
+        <file_path/>
+        <instance_id>0b000492dbded5580b9d21c405961959</instance_id>
+        <instance_name>dev138912</instance_name>
+        <name>sp_column_e9bf565b97927110be7fff96f053af88</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>1</order><semantic_tag/><size>12</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">edbf565b97927110be7fff96f053af85</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-11-09 18:35:51</sys_created_on><sys_id>e9bf565b97927110be7fff96f053af88</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package><sys_policy/><sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope><sys_update_name>sp_column_e9bf565b97927110be7fff96f053af88</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-11-09 18:35:51</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>-378820038</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>1744407697f53110be7fff96f053af96</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-09 18:35:51</sys_created_on>
+        <sys_id>2dbf161f97927110be7fff96f053afb7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18bb55e813c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-09 18:35:51</sys_updated_on>
+        <type>Column</type>
+        <update_guid>61bf161f8f927110fc4296167300a4b7</update_guid>
+        <update_guid_history>61bf161f8f927110fc4296167300a4b7:-378820038</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">1abf561f97927110be7fff96f053af08</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-09 18:35:54</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>4701bf063be84f8695dd5b29ef618d04</sys_id>
+        <sys_metadata>e9bf565b97927110be7fff96f053af88</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
+        <sys_scope_delete display_value="">11bc6cf9cacd4df4a0dd444b3e2812c9</sys_scope_delete>
+        <sys_update_name>sp_column_e9bf565b97927110be7fff96f053af88</sys_update_name>
+        <sys_update_version display_value="sp_column_e9bf565b97927110be7fff96f053af88">2dbf161f97927110be7fff96f053afb7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-09 18:35:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>coin_list</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Coin List</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+	/*
+	var gr = $sp.getRecord();  
+    data.goldCoins = gr.getValue('gold_coins');
+    data.hasGoldCoins = false;
+    if (!gs.nil(data.goldCoins)) {
+        data.hasGoldCoins = true;
+        console.log('Gold Coins: ' + data.goldCoins);
+    }
+	*/
+	
+	/* if(input.keywords != null && input.keywords != '') {
+		data.items = getCoins(input.keywords)
+	} */
+	
+	//The follow code will eventually be placed in its own function
+	// Create a GlideRecord to pull all the Treasure account records
+	var treasureGR = new GlideRecord('x_847214_treasure_treasure_account');
+	// Add a query to pull the account for Herb Legume.
+	// This will later be modified to accept a parameter from the calling function.
+	treasureGR.addQuery('account_owner.character_name', 'Herb Legume');
+	// Run the query to pull the record
+	treasureGR.query();
+	// Create a array variable to store the results
+	var results = [];
+	// Run a While loop to obtain the information from the record.
+	// While the loop may not be necessary for a single record...
+	// ...this will be useful for future modifications.
+	while(treasureGR.next()) {
+		// Do a quick check to make sure the Service Portal "$sp"
+		// can read the record.
+		if(!$sp.canReadRecord(treasureGR)) {
+			continue;
+		}
+		// Create an object to store the name/value pairs
+		var theCoins = {};
+		// grab and store the coin field names and values into the object using the GlideRecord
+		$sp.getRecordDisplayValues(theCoins, treasureGR, 'copper_coins,silver_coins,electrum_coins,gold_coins,platinum_coins');
+		// Push the object into array.
+		results.push(theCoins);
+		// Lastly, set the data.items as the array.
+		data.items = results;
+		
+	}
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-09 02:52:01</sys_created_on>
+        <sys_id>bfa7c3cf97d23110be7fff96f053afdc</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Coin List</sys_name>
+        <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
+        <sys_update_name>sp_widget_bfa7c3cf97d23110be7fff96f053afdc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-09 19:50:05</sys_updated_on>
+        <template><![CDATA[<div>
+<!-- your widget template -->
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      Coins in Account
+    </div>
+    <div class="panel-body">
+      <ul class="list-group result-container">
+        <li class="list-group-item" ng-repeat="item in c.data.items">
+          <p>Copper Coins:<span class="pull-right">{{item.copper_coins}}</span></p>
+          <p>Silver Coins:<span class="pull-right">{{item.silver_coins}}</span></p>
+          <p>Electrum Coins:<span class="pull-right">{{item.electrum_coins}}</span></p>
+          <p>Gold Coins:<span class="pull-right">{{item.gold_coins}}</span></p>
+          <p>Platinum Coins:<span class="pull-right">{{item.platinum_coins}}</span></p>
+        </li>
+      </ul>
+    </div>
+    <!--
+    <div ng-if="data.hasGoldCoins" class="panel b">
+			<div class="panel-heading">
+				<h4 class="panel-title">Gold Coins</h4>
+			</div>
+      <div class="panel-body">
+				{{data.goldCoins}}
+			</div>
+    </div>
+		-->
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>
