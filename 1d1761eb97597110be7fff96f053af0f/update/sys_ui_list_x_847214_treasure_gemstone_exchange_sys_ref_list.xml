@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>gemstone</element>
-            <list_id display_value="x_847214_treasure_gemstone_exchange" element="NULL" name="x_847214_treasure_gemstone_exchange" parent="NULL" relationship="NULL" sys_domain="global" view="00abf051b9103110d0adbb64e3a1e94f">da9dd3af9751b110be7fff96f053af03</list_id>
+            <list_id display_value="x_847214_treasure_gemstone_exchange" element="NULL" name="x_847214_treasure_gemstone_exchange" parent="NULL" relationship="NULL" sys_domain="global" view="25cac060d9313110cedf7dffddb48f4f">da9dd3af9751b110be7fff96f053af03</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -40,7 +40,7 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2023-09-22 00:41:56</sys_updated_on>
             <sys_user/>
-            <view display_value="Reference List" name="sys_ref_list">00abf051b9103110d0adbb64e3a1e94f</view>
+            <view display_value="Reference List" name="sys_ref_list">25cac060d9313110cedf7dffddb48f4f</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

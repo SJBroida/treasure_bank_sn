@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_847214_treasure_treasure_account</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Calculate Gold Balance</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Begin by defining the exchange rate variables.
+	var copperToGold = 0;
+	var silverToGold = 0;
+	var electrumToGold = 0;
+	var platinumToGold = 0;
+
+	// Fetch the current exchange rates from the Coin Exchange table.
+	// Do this using a GlideRecord.
+	var coinExchangeGR = new GlideRecord('x_847214_treasure_coin_exchange');
+	// Perform a query to pull all the records from the Coin Exchange table.
+	coinExchangeGR.query();
+	// Perform a while loop to go through each record to set the established exchange variables.
+	while (coinExchangeGR.next()) {
+		// Check to see what kind of coin is being examined
+		var theCoin = coinExchangeGR.getValue('coin');
+		// To test, print out the returned value
+		// gs.info("The GlideRecord is currently looking at " + theCoin + " coins.");
+		// Check value and set exchange rate to earlier established variables.
+		if(theCoin === 'Copper') {
+			copperToGold = coinExchangeGR.getValue('value_in_gold');
+			// gs.info("The copperToGold variable is now set to " + copperToGold + "!");
+		} else if(theCoin === 'Silver') {
+			silverToGold = coinExchangeGR.getValue('value_in_gold');
+			// gs.info("The silverToGold variable is now set to " + silverToGold + "!");
+		} else if(theCoin === 'Electrum') {
+			electrumToGold = coinExchangeGR.getValue('value_in_gold');
+			// gs.info("The electrumToGold variable is now set to " + electrumToGold + "!");
+		} else if(theCoin === 'Platinum') {
+			platinumToGold = coinExchangeGR.getValue('value_in_gold');
+			// gs.info("The platinumToGold variable is now set to " + platinumToGold + "!");
+		}
+	}
+
+	// Calculate the value of the coins that are in the account:
+	// gs.info("The value of previous.gold_coins is: " + previous.gold_coins + "!");
+	// gs.info("The value of current.gold_coins is: " + current.gold_coins + "!");
+	var theGoldCoins = current.gold_coins;
+	// gs.info("The value of current.silver_coins is: " + current.silver_coins + "!");
+	var theSilverCoins = current.silver_coins;
+	var silverInGold = theSilverCoins * silverToGold;
+	// gs.info("The value of current.copper_coins is: " + current.copper_coins + "!");
+	var theCopperCoins = current.copper_coins;
+	var copperInGold = theCopperCoins * copperToGold;
+	// gs.info("The value of current.electrum_coins is " + current.electrum_coins + "!");
+	var theElectrumCoins = current.electrum_coins;
+	var electrumInGold = theElectrumCoins * electrumToGold;
+	// gs.info("The value of current.platinum_coins is: " + current.platinum_coins + "!");
+	var thePlatinumCoins = current.platinum_coins;
+	var platinumInGold = thePlatinumCoins * platinumToGold;
+
+	// Add the Gold Coin value of all the coins together.
+	var theGoldTotal = theGoldCoins + silverInGold + copperInGold + electrumInGold + platinumInGold;
+	// gs.info("The value of theGoldTotal variable is " + theGoldTotal);
+	// Set the gold_balance to the total.
+	current.gold_balance = theGoldTotal;
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-25 21:42:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3949f1ae97423110be7fff96f053af3d</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>Calculate Gold Balance</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
+        <sys_update_name>sys_script_3949f1ae97423110be7fff96f053af3d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-07 23:51:04</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=3949f1ae97423110be7fff96f053af3d"/>
+</record_update>

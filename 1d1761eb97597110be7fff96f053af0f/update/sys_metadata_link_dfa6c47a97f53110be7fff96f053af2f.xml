@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>bf279b679751b110be7fff96f053af12</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_847214_treasure_gemstone_size_rates">
+    <x_847214_treasure_gemstone_size_rates action="INSERT_OR_UPDATE">
+        <number>GEMSIZE0001008</number>
+        <size>1/8" Diameter</size>
+        <size_description>Small</size_description>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 00:14:11</sys_created_on>
+        <sys_id>bf279b679751b110be7fff96f053af12</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 00:14:11</sys_updated_on>
+        <value_multiplier>0.1</value_multiplier>
+    </x_847214_treasure_gemstone_size_rates>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-13 21:38:52</sys_created_on>
+        <sys_id>dfa6c47a97f53110be7fff96f053af2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1/8" Diameter</sys_name>
+        <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
+        <sys_update_name>sys_metadata_link_dfa6c47a97f53110be7fff96f053af2f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-13 21:38:52</sys_updated_on>
+        <tablename>x_847214_treasure_gemstone_size_rates</tablename>
+    </sys_metadata_link>
+</record_update>

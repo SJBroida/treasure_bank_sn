@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c935a7a397f93510be7fff96f053af84" label="Game Player" max_length="40" name="x_847214_treasure_game_player" type="collection">
+        <element display="true" label="Character Name" max_length="40" name="character_name" type="string"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

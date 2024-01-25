@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Coins" section_id="f397392e97423110be7fff96f053af6a" sys_domain="global" table="x_847214_treasure_treasure_account" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>copper_coins</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-25 21:29:34</sys_created_on>
+            <sys_id>40a7392e97423110be7fff96f053afc8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Coins" display_value="Coins" name="x_847214_treasure_treasure_account" sys_domain="global" view="Default view">f397392e97423110be7fff96f053af6a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-25 21:29:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>silver_coins</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-25 21:29:34</sys_created_on>
+            <sys_id>c0a7392e97423110be7fff96f053afc8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Coins" display_value="Coins" name="x_847214_treasure_treasure_account" sys_domain="global" view="Default view">f397392e97423110be7fff96f053af6a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-25 21:29:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>electrum_coins</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-25 21:29:34</sys_created_on>
+            <sys_id>44a7392e97423110be7fff96f053afc8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Coins" display_value="Coins" name="x_847214_treasure_treasure_account" sys_domain="global" view="Default view">f397392e97423110be7fff96f053af6a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-25 21:29:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-25 21:29:34</sys_created_on>
+            <sys_id>c4a7392e97423110be7fff96f053afc8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Coins" display_value="Coins" name="x_847214_treasure_treasure_account" sys_domain="global" view="Default view">f397392e97423110be7fff96f053af6a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-25 21:29:34</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>gold_coins</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-25 21:29:34</sys_created_on>
+            <sys_id>48a7392e97423110be7fff96f053afc8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Coins" display_value="Coins" name="x_847214_treasure_treasure_account" sys_domain="global" view="Default view">f397392e97423110be7fff96f053af6a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-25 21:29:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>platinum_coins</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-25 21:29:34</sys_created_on>
+            <sys_id>c8a7392e97423110be7fff96f053afc8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Coins" display_value="Coins" name="x_847214_treasure_treasure_account" sys_domain="global" view="Default view">f397392e97423110be7fff96f053af6a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-25 21:29:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Coins</caption>
+            <header>false</header>
+            <name>x_847214_treasure_treasure_account</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-25 21:29:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f397392e97423110be7fff96f053af6a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_847214_treasure_treasure_account</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
+            <sys_update_name>sys_ui_section_f397392e97423110be7fff96f053af6a</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-25 21:29:33</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

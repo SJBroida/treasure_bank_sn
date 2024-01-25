@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="69e0acf397fd3510be7fff96f053af44" label="Treasure Account" max_length="40" name="x_847214_treasure_treasure_account" type="collection">
+        <element label="Account Owner" mandatory="true" max_length="32" name="account_owner" reference="x_847214_treasure_game_player" type="reference"/>
+        <element label="Copper Coins" max_length="40" name="copper_coins" type="integer"/>
+        <element label="Electrum Coins" max_length="40" name="electrum_coins" type="integer"/>
+        <element label="Gold Balance" max_length="20" name="gold_balance" read_only="true" type="decimal"/>
+        <element label="Gold Coins" max_length="40" name="gold_coins" type="integer"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" mandatory="true" max_length="40" name="number" type="string"/>
+        <element label="Platinum Coins" max_length="40" name="platinum_coins" type="integer"/>
+        <element label="Silver Coins" max_length="40" name="silver_coins" type="integer"/>
+        <index name="index">
+            <element name="account_owner"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="7797392e97423110be7fff96f053af6b" sys_domain="global" table="x_847214_treasure_treasure_account" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-25 21:29:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0ca7392e97423110be7fff96f053af6e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_847214_treasure_treasure_account" name="x_847214_treasure_treasure_account" sys_domain="global" view="Default view">7797392e97423110be7fff96f053af6b</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_847214_treasure_treasure_account" sys_domain="global" view="Default view">5260d4c4970e7510be7fff96f053af07</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-25 21:29:34</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-25 21:29:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>08a7392e97423110be7fff96f053af6f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_847214_treasure_treasure_account" name="x_847214_treasure_treasure_account" sys_domain="global" view="Default view">7797392e97423110be7fff96f053af6b</sys_ui_form>
+            <sys_ui_section caption="Coins" display_value="Coins" name="x_847214_treasure_treasure_account" sys_domain="global" view="Default view">f397392e97423110be7fff96f053af6a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-25 21:29:34</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_847214_treasure_treasure_account</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-10-25 21:29:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7797392e97423110be7fff96f053af6b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_847214_treasure_treasure_account</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
+            <sys_update_name>sys_ui_form_sections_7797392e97423110be7fff96f053af6b</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-10-25 21:29:33</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
