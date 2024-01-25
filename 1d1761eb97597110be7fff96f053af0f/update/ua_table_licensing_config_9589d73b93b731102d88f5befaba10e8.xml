@@ -4,22 +4,22 @@
         <license_condition/>
         <license_model>none</license_model>
         <license_roles/>
-        <name>x_847214_treasure_gemstone_exchange</name>
+        <name>x_847214_treasure_treasure_account</name>
         <op_delete>true</op_delete>
         <op_insert>true</op_insert>
         <op_update>true</op_update>
         <owner_condition/>
         <sys_class_name>ua_table_licensing_config</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-09-21 16:28:14</sys_created_on>
-        <sys_id>a29ce96397997110be7fff96f053afc2</sys_id>
+        <sys_created_on>2024-01-25 01:39:34</sys_created_on>
+        <sys_id>9589d73b93b731102d88f5befaba10e8</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_847214_treasure_gemstone_exchange</sys_name>
+        <sys_name>x_847214_treasure_treasure_account</sys_name>
         <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
-        <sys_update_name>ua_table_licensing_config_a29ce96397997110be7fff96f053afc2</sys_update_name>
+        <sys_update_name>ua_table_licensing_config_9589d73b93b731102d88f5befaba10e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-09-21 16:28:14</sys_updated_on>
+        <sys_updated_on>2024-01-25 01:39:34</sys_updated_on>
     </ua_table_licensing_config>
 </record_update>

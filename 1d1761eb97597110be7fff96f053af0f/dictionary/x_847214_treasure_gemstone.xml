@@ -14,5 +14,8 @@
         <index name="index2">
             <element name="size"/>
         </index>
+        <index name="index3">
+            <element name="type"/>
+        </index>
     </element>
 </database>

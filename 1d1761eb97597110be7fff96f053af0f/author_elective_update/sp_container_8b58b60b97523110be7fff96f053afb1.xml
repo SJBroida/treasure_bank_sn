@@ -52,7 +52,7 @@
         <update_guid_history>0f58b60b8c5231106ce813538e2299b4:1114345194</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Account Dashboard - Container 2">e6bf561f97927110be7fff96f053af20</sys_audit_delete>
+        <sys_audit_delete display_value="">e6bf561f97927110be7fff96f053af20</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-11-09 18:35:55</sys_created_on>
