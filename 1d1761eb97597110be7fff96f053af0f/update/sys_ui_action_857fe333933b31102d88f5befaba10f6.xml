@@ -35,8 +35,22 @@
 	// Code to ensure button press is registered on client side.
 	// console.log('You clicked the button!  Nice!');
 
-	var theModal = new GlideModal('x_847214_treasure_refresh_coin_rates_modal');
-	theModal.setTitle('This is the Modal Title!');
+	// Create a new Modal object that loads the appropriate UI Page
+	// Remember that the prefix is necessary before the UI Page name
+	// The UI Page "attachment" that comes OOB with ServiceNow will work
+	var theModal = new GlideModal('attachment');
+
+	// Set the text for the Title in the Modal window.
+	theModal.setTitle('Select an Excel file');
+
+	// Pass the table name over to the UI Page
+	theModal.setPreference('target_table', g_list.getTableName());
+
+	// Let the HTML in the 'attachment' UI Page know attachment_disabled is false
+	// This is necessary to allow for an attachment to be uploaded.
+	theModal.setPreference('attachment_disabled', false);
+
+	// Render the Modal window so it appears before the user.
 	theModal.render();
 
 }]]></script>
@@ -50,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>857fe333933b31102d88f5befaba10f6</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Refresh Rates</sys_name>
         <sys_overrides/>
         <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
@@ -58,7 +72,7 @@
         <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
         <sys_update_name>sys_ui_action_857fe333933b31102d88f5befaba10f6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-01-25 22:17:02</sys_updated_on>
+        <sys_updated_on>2024-01-27 00:57:41</sys_updated_on>
         <table>x_847214_treasure_coin_exchange</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
