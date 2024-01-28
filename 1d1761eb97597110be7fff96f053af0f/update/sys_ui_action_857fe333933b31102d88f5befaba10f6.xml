@@ -8,8 +8,8 @@
 }]]></client_script_v2>
         <comments>Opens a modal window to select an Excel file to upload to the Scoped Application.  Once uploaded, it will be parsed to update the Coin Exchanges table.</comments>
         <condition/>
-        <form_action>false</form_action>
-        <form_button>false</form_button>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
         <form_context_menu>false</form_context_menu>
         <form_link>false</form_link>
@@ -18,8 +18,8 @@
         <format_for_configurable_workspace>false</format_for_configurable_workspace>
         <hint/>
         <isolate_script>false</isolate_script>
-        <list_action>true</list_action>
-        <list_banner_button>true</list_banner_button>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
         <list_button>false</list_button>
         <list_choice>false</list_choice>
         <list_context_menu>false</list_context_menu>
@@ -40,11 +40,24 @@
 	// The UI Page "attachment" that comes OOB with ServiceNow will work
 	var theModal = new GlideModal('attachment');
 
+	/* To get a unique ID for the list using GlideListProperties API
+	 * Create a GlideListProperties object 
+	 * This will ONLY work in Server Side code, so it won't work
+	 * this time.
+	*/
+	// var listProps = new GlideListProperties();
+
 	// Set the text for the Title in the Modal window.
 	theModal.setTitle('Select an Excel file');
 
+	// Pass the target_sys_id to the over to the UI Page
+	// This will not work on a List button since there is no
+	// similar function for g_list.  Use g_form here.
+	theModal.setPreference('target_sys_id', g_form.getUniqueValue());
+
 	// Pass the table name over to the UI Page
-	theModal.setPreference('target_table', g_list.getTableName());
+	// The function needed, getTableName(), is available for both g_list and g_form
+	theModal.setPreference('target_table', g_form.getTableName());
 
 	// Let the HTML in the 'attachment' UI Page know attachment_disabled is false
 	// This is necessary to allow for an attachment to be uploaded.
@@ -64,7 +77,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>857fe333933b31102d88f5befaba10f6</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>Refresh Rates</sys_name>
         <sys_overrides/>
         <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
@@ -72,7 +85,7 @@
         <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
         <sys_update_name>sys_ui_action_857fe333933b31102d88f5befaba10f6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-01-27 00:57:41</sys_updated_on>
+        <sys_updated_on>2024-01-28 20:30:21</sys_updated_on>
         <table>x_847214_treasure_coin_exchange</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
