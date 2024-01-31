@@ -51,6 +51,10 @@
 	// Inserting and Updating records in the table.
 	var coinExchangeGR = new GlideRecord('x_847214_treasure_coin_exchange');
 
+	// Create a GlideRecord for the sys_attachment table to remove the 
+	// record with the attachment after work is finished.
+	var attachmentGR = new GlideRecord('sys_attachment');
+
 	/*
 	*	Fetch information for Parser
 	*/
@@ -133,7 +137,7 @@
 					coinExchangeGR.setValue('value_in_gold', goldValue);
 					coinExchangeGR.setValue('value_in_platinum', platinumValue);
 				}
-			}
+			} // End while loop for coinExchangeGR
 
 			// If no matching record is found after looping through all records
 			// Insert a new record with the proper data.
@@ -155,10 +159,21 @@
 				// Insert the new record
 				coinExchangeGR.insert();
 
-			}
-		}
+			} // If statement for recordExist
 
-	}
+		} // End While loop for theParser
+
+	} // End If statement for Coins Excel Sheet
+
+	/*
+	*	Clean Up Attachment now that work is finished.
+	*/
+
+	// Load the record with the attachment into the sys_attachment GlideRecord
+	attachmentGR.get(current.sys_id);
+
+	// Delete the record containing the attachment.
+	attachmentGR.deleteRecord();
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -167,7 +182,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5a434749930c82102d88f5befaba1094</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>Refresh Coin Exchange Rates</sys_name>
         <sys_overrides/>
         <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
@@ -175,7 +190,7 @@
         <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
         <sys_update_name>sys_script_5a434749930c82102d88f5befaba1094</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-01-31 00:47:43</sys_updated_on>
+        <sys_updated_on>2024-01-31 02:55:39</sys_updated_on>
         <template/>
         <when>async_always</when>
     </sys_script>
