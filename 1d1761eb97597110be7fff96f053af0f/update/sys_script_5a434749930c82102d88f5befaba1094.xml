@@ -33,44 +33,15 @@
 
 	// Add your code here
 	// Code to ensure file upload is detected on Server Side.
-	gs.info("I have detected that a file has been attached to a record for the Coin Exchange table!");
+	// gs.info("I have detected that a file has been attached to a record for the Coin Exchange table!");
 
 	/*
-	*	Fetch the Attachment
+	*	Create Glide objects
 	*/
 
-	// Create a GlideRecord to the sys_attachment table in order to
-	// retrieve the attachment to feed into the Excel Parser
-	var attachmentGR = new GlideRecord('sys_attachment');
-
-	// Add a Query to the GlideRecord to find the attachment using
-	// the the current's sys_id to as the table_sys_id of the Attachment
-	attachmentGR.addQuery('table_sys_id', current.table_sys_id);
-
-	// Run the Query to load the record containing the attachment
-	// into the GlideRecord
-	attachmentGR.query();
-
-	// Create an empty string to store the sys_id of the attachment
-	var attachmentID = "";
-
-	// To ensure that there is only one record, create a counter.
-	var numRecords = 0;
-
-	// Run a while loop to load the next record in the attachment
-	// GlideRecord.  There should only be one record!
-	while(attachmentGR.next()){
-
-		numRecords++;
-		attachmentID = attachmentGR.sys_id;
-
-	}
-
-	// This code is to verify that the sys_id was successfully obtained and is correct.
-	gs.info("The number of relevant records with attachments are: " + numRecords);
-	gs.info("The sys_id of the attachment is: " + attachmentID);
-	gs.info("The table_sys_id of current is: " + current.table_sys_id);
-	gs.info("The sys_id of current is: " + current.sys_id);
+	// Create a GlideExcelParser object to parse through the Excel file.
+	// Requires the "sn_impex" name space identifier to create object.
+	var theParser = new sn_impex.GlideExcelParser();
 
 	// Create a GlideSysAttachment object to pull information off the
 	// attachment identified by the attachmentID.
@@ -80,7 +51,114 @@
 	// Inserting and Updating records in the table.
 	var coinExchangeGR = new GlideRecord('x_847214_treasure_coin_exchange');
 
+	/*
+	*	Fetch information for Parser
+	*/
 
+	// Get the Content Stream from the attachment to feed to the Parser.
+	// Since this Business Rule is connected to the sys_attachment table,
+	// current points to the record containing the attached Excel File.
+	var attachmentStream = attachment.getContentStream(current.sys_id);
+
+	// Load the Content Stream into the GlideExcelParser.  Since this
+	// will only be parsing through one sheet of the Excel file,
+	// the code will use parse() instead of setSource().
+	theParser.parse(attachmentStream);
+
+	// To ensure that the sheet names are readable, run getSheetNames()
+	// to check the sheet named "Coins" is present.
+	var sheetNameArray = theParser.getSheetNames();
+
+	// This code is to test and make sure the Sheet Names are obtained correctly.
+	// gs.info("The names of the sheets in the Excel file are: " + sheetNameArray.join(", "));
+
+	/*
+	*	Point to the correct sheet before parsing
+	*/
+
+	// Check to see if "Coins" is in the array of Sheet Names.  
+	// If it's not, take no action.
+	if(sheetNameArray.indexOf('Coins') > -1){
+		// This code logs if the correct sheet has been found.
+		// gs.info('There is a Sheet in this Excel File named "Coins"');
+
+		// Set the worksheet to be parsed by the GlideExcelParser
+		theParser.setSheetName('Coins');
+
+		/*
+		*	Perform while loop to go through each row.
+		*/
+
+		while(theParser.next()){
+
+			// Grab the current row
+			var theRow = theParser.getRow();
+
+			// Extract all needed values from the row.
+			var theCoin = theRow['Coin'];
+			var copperValue = theRow['Value in Copper'];
+			var silverValue = theRow['Value in Silver'];
+			var electrumValue = theRow['Value in Electrum'];
+			var goldValue = theRow['Value in Gold'];
+			var platinumValue = theRow['Value in Platinum'];
+
+			// This code is to verify that all the information from the Row is read accurately.
+			// gs.info("Currently looking at " + theCoin + " coins which are worth " + copperValue + " copper coin(s), " + silverValue + " silver coin(s), " + electrumValue + " electrum coin(s), " + goldValue + " gold coin(s), and " + platinumValue + " platinum coin(s).");
+
+			/*
+			*	Search for existing records in Coin Exchange GlideRecord
+			*/
+
+			// Load all the records in the Coin Exchange table, even if there are none.
+			coinExchangeGR.query();
+
+			// Create a Boolean flag to check for if the record exists.
+			var recordExist = false;
+
+			// Begin looping through the Coin Exchange table's records
+			while(coinExchangeGR.next()) {
+				
+				// Since at least one record exists, fetch the value of the Coin field.
+				var currentCoin = coinExchangeGR.getValue('coin');
+
+				// Check if the current record's coin matches the coin from the parser
+				if(theCoin === currentCoin) {
+					// Set the flag that the record exists to True so no new records are made after.
+					recordExist = true;
+
+					// Update the values of the current record
+					coinExchangeGR.setValue('value_in_copper', copperValue);
+					coinExchangeGR.setValue('value_in_silver', silverValue);
+					coinExchangeGR.setValue('value_in_electrum', electrumValue);
+					coinExchangeGR.setValue('value_in_gold', goldValue);
+					coinExchangeGR.setValue('value_in_platinum', platinumValue);
+				}
+			}
+
+			// If no matching record is found after looping through all records
+			// Insert a new record with the proper data.
+			if(recordExist) {
+				// Do not do anything if the flag is set to true
+			} else {
+				
+				// Initialize a new record for the Coin Exchange table
+				coinExchangeGR.initialize();
+
+				// Set the values for the new record
+				coinExchangeGR.setValue('coin', theCoin);
+				coinExchangeGR.setValue('value_in_copper', copperValue);
+				coinExchangeGR.setValue('value_in_silver', silverValue);
+				coinExchangeGR.setValue('value_in_electrum', electrumValue);
+				coinExchangeGR.setValue('value_in_gold', goldValue);
+				coinExchangeGR.setValue('value_in_platinum', platinumValue);
+
+				// Insert the new record
+				coinExchangeGR.insert();
+
+			}
+		}
+
+	}
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -89,7 +167,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5a434749930c82102d88f5befaba1094</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>Refresh Coin Exchange Rates</sys_name>
         <sys_overrides/>
         <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
@@ -97,9 +175,9 @@
         <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
         <sys_update_name>sys_script_5a434749930c82102d88f5befaba1094</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-01-30 20:26:28</sys_updated_on>
+        <sys_updated_on>2024-01-31 00:47:43</sys_updated_on>
         <template/>
-        <when>after</when>
+        <when>async_always</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=5a434749930c82102d88f5befaba1094"/>
 </record_update>
