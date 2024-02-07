@@ -39,6 +39,10 @@
 	*	Create Glide objects
 	*/
 
+	// Create a GlideRecord for the Coin Exchange table to be used for 
+	// Inserting and Updating records in the table.
+	var coinExchangeGR = new GlideRecord('x_847214_treasure_coin_exchange');
+
 	// Create a GlideExcelParser object to parse through the Excel file.
 	// Requires the "sn_impex" name space identifier to create object.
 	var theParser = new sn_impex.GlideExcelParser();
@@ -46,10 +50,6 @@
 	// Create a GlideSysAttachment object to pull information off the
 	// attachment identified by the attachmentID.
 	var attachment = new GlideSysAttachment();
-
-	// Create a GlideRecord for the Coin Exchange table to be used for 
-	// Inserting and Updating records in the table.
-	var coinExchangeGR = new GlideRecord('x_847214_treasure_coin_exchange');
 
 	// Create a GlideRecord for the sys_attachment table to remove the 
 	// record with the attachment after work is finished.
@@ -109,42 +109,29 @@
 			// This code is to verify that all the information from the Row is read accurately.
 			// gs.info("Currently looking at " + theCoin + " coins which are worth " + copperValue + " copper coin(s), " + silverValue + " silver coin(s), " + electrumValue + " electrum coin(s), " + goldValue + " gold coin(s), and " + platinumValue + " platinum coin(s).");
 
-			/*
-			*	Search for existing records in Coin Exchange GlideRecord
-			*/
-
-			// Load all the records in the Coin Exchange table, even if there are none.
-			coinExchangeGR.query();
-
-			// Create a Boolean flag to check for if the record exists.
-			var recordExist = false;
-
-			// Begin looping through the Coin Exchange table's records
-			while(coinExchangeGR.next()) {
-				
-				// Since at least one record exists, fetch the value of the Coin field.
-				var currentCoin = coinExchangeGR.getValue('coin');
-
-				// Check if the current record's coin matches the coin from the parser
-				if(theCoin === currentCoin) {
-					// Set the flag that the record exists to True so no new records are made after.
-					recordExist = true;
-
-					// Update the values of the current record
-					coinExchangeGR.setValue('value_in_copper', copperValue);
-					coinExchangeGR.setValue('value_in_silver', silverValue);
-					coinExchangeGR.setValue('value_in_electrum', electrumValue);
-					coinExchangeGR.setValue('value_in_gold', goldValue);
-					coinExchangeGR.setValue('value_in_platinum', platinumValue);
-				}
-			} // End while loop for coinExchangeGR
-
 			// If no matching record is found after looping through all records
 			// Insert a new record with the proper data.
-			if(recordExist) {
-				// Do not do anything if the flag is set to true
-			} else {
+			// But if one is found, query that record and update it.
+			if( recordExist(theCoin) ) {
 				
+				// Code to test if the record was not found.
+				gs.info("A record for " + theCoin + " has been found.");
+
+				coinExchangeGR.addQuery('coin', theCoin);
+				coinExchangeGR.query();
+
+				// Update the values of the correct record
+				coinExchangeGR.setValue('value_in_copper', copperValue);
+				coinExchangeGR.setValue('value_in_silver', silverValue);
+				coinExchangeGR.setValue('value_in_electrum', electrumValue);
+				coinExchangeGR.setValue('value_in_gold', goldValue);
+				coinExchangeGR.setValue('value_in_platinum', platinumValue);
+
+			} else {
+			
+				// Code to test if the record was found.
+				gs.info("No records containing " + theCoin + " have been found.")
+
 				// Initialize a new record for the Coin Exchange table
 				coinExchangeGR.initialize();
 
@@ -170,19 +157,54 @@
 	*/
 
 	// Load the record with the attachment into the sys_attachment GlideRecord
-	attachmentGR.get(current.sys_id);
+	// attachmentGR.get(current.sys_id);
 
 	// Delete the record containing the attachment.
-	attachmentGR.deleteRecord();
+	// attachmentGR.deleteRecord();
 
-})(current, previous);]]></script>
+})(current, previous);
+
+/*
+*	Search for existing records in Coin Exchange GlideRecord
+*/
+function recordExist(theCoin) {
+
+	// Create a GlideRecord for the Coin Exchange table to be used for 
+	// checking if a record exists.
+	var coinExchangeGR = new GlideRecord('x_847214_treasure_coin_exchange');
+
+	// Load all the records in the Coin Exchange table, even if there are none.
+	coinExchangeGR.query();
+
+	// Create a Boolean flag to check for if the record exists.
+	var recordExist = false;
+
+	// Begin looping through the Coin Exchange table's records
+	while(coinExchangeGR.next()) {
+				
+		// Since at least one record exists, fetch the value of the Coin field.
+		var currentCoin = coinExchangeGR.getValue('coin');
+
+		// Check if the current record's coin matches the coin from the parser
+		if(theCoin === currentCoin) {
+			// Set the flag that the record exists to True since a match has been found.
+			recordExist = true;
+
+		}
+
+	} // End while loop for coinExchangeGR
+
+	// Return the Boolean flag
+	return recordExist;
+
+}]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-01-28 21:39:26</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5a434749930c82102d88f5befaba1094</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name>Refresh Coin Exchange Rates</sys_name>
         <sys_overrides/>
         <sys_package display_value="Treasure Bank" source="x_847214_treasure">1d1761eb97597110be7fff96f053af0f</sys_package>
@@ -190,7 +212,7 @@
         <sys_scope display_value="Treasure Bank">1d1761eb97597110be7fff96f053af0f</sys_scope>
         <sys_update_name>sys_script_5a434749930c82102d88f5befaba1094</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-01-31 02:55:39</sys_updated_on>
+        <sys_updated_on>2024-02-07 19:53:50</sys_updated_on>
         <template/>
         <when>async_always</when>
     </sys_script>
